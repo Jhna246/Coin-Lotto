@@ -6,6 +6,8 @@ contract Lottery {
     
     address[] public players;
     
+    address public lastWinner;
+    
     function Lottery() public {
         
         creator = msg.sender;
@@ -39,6 +41,8 @@ contract Lottery {
         
         players[idx].transfer(address(this).balance);
         
+        lastWinner = players[idx];
+  
         players = new address[](0);
         
     }
