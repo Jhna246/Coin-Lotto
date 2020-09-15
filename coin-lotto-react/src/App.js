@@ -96,7 +96,7 @@ class App extends Component {
               onChange={event => this.setState({ value: event.target.value })}
             />
           </div>
-          <button>Enter</button>
+          <button className='btn btn-dark'>Enter</button>
         </form>
 
         <hr />
