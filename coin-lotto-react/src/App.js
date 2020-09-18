@@ -22,7 +22,6 @@ class App extends Component {
     const balance = await web3.eth.getBalance(coinlotto.options.address);
     const lastWinner = await coinlotto.methods.lastWinner().call();
 
-
     this.setState({ 
       creator: creator, 
       players: players, 
